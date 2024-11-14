@@ -1,3 +1,10 @@
-core_radius=10;
+core_radius=9.5;
 core_thickness=7;
 core_center_bump_height=1.5;
+body_radius=28;
+body_width=22;
+rim_thickness=8;
+rim_depth=rim_thickness;
+bearing_width=4.762;
+bearing_mount_offset=0.25;
+bearing_center_offset=-bearing_width/2+bearing_mount_offset;
