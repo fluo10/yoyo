@@ -1,9 +1,9 @@
-include <global_variables.scad>;
+include <../config.scad>;
 include <BOSL2/std.scad>;
 include <BOSL2/screws.scad>;
 use <core_base.scad>;
 
-bolt_body_length=20;
+bolt_body_length=15;
 
 module bolted_core(bolt_body_length=bolt_body_length) {
     bolt_nut_interval_length=bolt_body_length-3;

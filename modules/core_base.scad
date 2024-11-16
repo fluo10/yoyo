@@ -1,11 +1,11 @@
-include <global_variables.scad>;
+include <../config.scad>;
 
 pad_groove_outer_radius=9.6;
 pad_groove_inner_radius=7.2;
 pad_groove_depth=1;
 bearing_groove_outer_radius=6.5;
 bearing_groove_mid_radius=4.5;
-bearing_groove_inner_radius=3.125;
+bearing_groove_inner_radius=3.175;
 bearing_groove_min_depth=bearing_mount_offset;
 bearing_groove_max_depth=pad_groove_depth;
 
