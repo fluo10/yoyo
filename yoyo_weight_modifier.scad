@@ -2,8 +2,6 @@ include <config.scad>;
 include <modules/specs.scad>;
 use <modules/core.scad>;
 
-
-
 module yoyo_weight_modifier(body_radius, body_width,  bolt_body_length, nut_thickness, weight_layer_thickness) {
     weight_outer_radius=sqrt(body_radius^2 + body_width^2);
     weight_inner_radius=weight_outer_radius-weight_layer_thickness;

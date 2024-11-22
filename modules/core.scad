@@ -3,7 +3,7 @@ include <BOSL2/std.scad>;
 include <BOSL2/screws.scad>;
 pad_groove_outer_radius=9.6;
 pad_groove_inner_radius=7.1;
-pad_groove_depth=1;
+pad_groove_depth=1.1;
 bearing_groove_outer_radius=pad_groove_inner_radius-0.4;
 bearing_groove_mid_radius=bearing_mount_radius;
 bearing_groove_inner_radius=3.175;

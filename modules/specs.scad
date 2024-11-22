@@ -1,9 +1,6 @@
 core_radius=10;
 core_min_thickness=2;
 
-
-
-round_body_rim_thickness=10;
 bearing_width=4.762;
 
 eps=0.01;
@@ -18,7 +15,7 @@ edge_radius=1;
 $fn=180;
 function bolt_nut_interval_length(bolt_body_length, nut_thickness)=bolt_body_length-nut_thickness;
 
-bolt_hole_body_margin=1;
+bolt_hole_body_margin=0.2;
 function bolt_hole_body_length(bolt_body_length, nut_thickness)=bolt_nut_interval_length(bolt_body_length, nut_thickness)/2-bolt_hole_body_margin;
 
 function bolt_hole_length(bolt_body_length, nut_thickness)=nut_thickness+bolt_hole_body_length(bolt_body_length, nut_thickness);
