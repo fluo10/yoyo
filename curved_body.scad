@@ -1,8 +1,7 @@
 include <specs.scad>;
-include <config.example.scad>;
-include <../modules/BOSL2/std.scad>;
-include <../modules/BOSL2/beziers.scad>;
-include <../modules/BOSL2/rounding.scad>;
+include <modules/BOSL2/std.scad>;
+include <modules/BOSL2/beziers.scad>;
+include <modules/BOSL2/rounding.scad>;
 
 use <core.scad>;
 
@@ -33,4 +32,4 @@ module curved_body(body_size, rim_thickness, bolt_nut_length, bezier_body_contro
     rotate([180,0, 0]) rotate_extrude()  curved_body_profile(body_size, rim_thickness, bolt_nut_length, bezier_body_control_points);
 }
 
-curved_body(body_size, rim_thickness, bolt_nut_length, curved_body_control_points);
+curved_body(test_body_size, test_rim_thickness, test_bolt_nut_length, test_curved_body_control_points);

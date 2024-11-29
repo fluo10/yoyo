@@ -1,4 +1,3 @@
-include <config.example.scad>;
 include <specs.scad>;
 use <core.scad>;
 
@@ -16,7 +15,7 @@ module reverse_fan(size) {
 }
     
 
-module bowl_face_hole_profile(body_size, rim_thickness, bolt_nut_length, face_groove_size) {
+module bowl_face_hole_profile(body_size, rim_thickness, bolt_nut_length) {
     center_width=face_center_width(bolt_nut_length);
     
     module half_hole(size){
@@ -33,24 +32,14 @@ module bowl_face_hole_profile(body_size, rim_thickness, bolt_nut_length, face_gr
             
     }
 
+    translate([bearing_mount_radius-eps, body_size[1]+eps ]) half_hole([body_size[0]-rim_thickness-bearing_mount_radius+eps,body_size[1]-face_center_width(bolt_nut_length)+eps]);
 
-    if(!face_groove_size) {
-        translate([bearing_mount_radius-eps, body_size[1]+eps ]) half_hole([body_size[0]-rim_thickness-bearing_mount_radius+eps,body_size[1]-face_center_width(bolt_nut_length)+eps]);
-
-        
-    } else {
-        union(){
-            face_inner_curve();
-            face_outer_curve();
-        }
-    }
 }
-module bowl_face_hole(body_size, rim_thickness, bolt_nut_length, face_groove_size) {
-    rotate([180, 0,0]) rotate_extrude() bowl_face_hole_profile(body_size, rim_thickness, bolt_nut_length, face_groove_size);
+module bowl_face_hole(body_size, rim_thickness, bolt_nut_length) {
+    rotate([180, 0,0]) rotate_extrude() bowl_face_hole_profile(body_size, rim_thickness, bolt_nut_length);
 }
 bowl_face_hole_profile(
-    body_size=body_size,
-    rim_thickness=10, 
-    bolt_nut_length=bolt_nut_length,
-    face_groove_size=[]
+    body_size=test_body_size,
+    rim_thickness=test_rim_thickness, 
+    bolt_nut_length=test_bolt_nut_length
 );

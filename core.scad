@@ -1,10 +1,10 @@
 include <specs.scad>;
-include <../modules/BOSL2/std.scad>;
-include <../modules/BOSL2/screws.scad>;
+include <modules/BOSL2/std.scad>;
+include <modules/BOSL2/screws.scad>;
 pad_groove_outer_radius=9.6;
 pad_groove_inner_radius=7.1;
 pad_groove_depth=1.1;
-bearing_groove_outer_radius=pad_groove_inner_radius-0.6;
+bearing_groove_outer_radius=pad_groove_inner_radius-0.45;
 bearing_groove_mid_radius=bearing_mount_radius;
 bearing_groove_inner_radius=3.175;
 
@@ -73,5 +73,5 @@ module core(bolt_nut_length) {
         core_hole(bolt_nut_length);
     }
 }
-core(bolt_nut_length=[20,3]);
+core(bolt_nut_length=test_bolt_nut_length);
 //core_groove();

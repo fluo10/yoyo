@@ -1,4 +1,3 @@
-include <config.example.scad>;
 include <specs.scad>;
 use <core.scad>;
 use <face.scad>;
@@ -42,6 +41,6 @@ module round_yoyo(body_size, rim_thickness, bolt_nut_length) {
 
 
 difference() {
-    round_body(body_size, rim_thickness, bolt_nut_length);
-    translate([0, 0, - body_size[1]-eps]) cube([body_size[0], body_size[0], body_size[1]+bearing_width/2+eps*2]);
+    round_body(test_body_size, test_rim_thickness, test_bolt_nut_length);
+    translate([0, 0, - test_body_size[1]-eps]) cube([test_body_size[0], test_body_size[0], test_body_size[1]+bearing_width/2+eps*2]);
 };
